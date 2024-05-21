@@ -1,3 +1,11 @@
-<p>rooms works! {{ person }}</p>
+<p>Room Component works</p>
+
+<div [innerText]="noOfRooms"></div>
+
+<!-- Add the import statement at the top of the component file -->
+
+<div *ngIf="noOfRooms > 0">
+  <h4>You can book your room</h4>
+</div>
 
 <button (click)="onClick()">Click Me.!</button>

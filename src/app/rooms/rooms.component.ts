@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-rooms',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './rooms.component.html',
   styleUrl: './rooms.component.css',
 })
 export class RoomsComponent implements OnInit {
-  person = 'sujan';
+  noOfRooms = 0;
+
+  roomMetaInfo = {
+    booked: 10,
+    available: 10,
+  };
 
   constructor() {}
 
