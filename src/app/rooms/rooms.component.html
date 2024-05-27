@@ -1,11 +1,21 @@
-<p>Room Component works</p>
+<h4>Room Component works</h4>
 
-<div [innerText]="noOfRooms"></div>
+<h4 [ngClass]="classList">Room Available {{ availableRoom }}</h4>
 
-<!-- Add the import statement at the top of the component file -->
+<button (click)="onRoomStatusCheck()">Check Availability</button>
 
-<div *ngIf="noOfRooms > 0">
-  <h4>You can book your room</h4>
+<h5 *ngIf="availableRoom">Rooms Available.! You can book now</h5>
+<h5 *ngIf="!availableRoom">Rooms Not Available.! Please try again later</h5>
+
+<h5>List All types of rooms</h5>
+
+<p appHighlights>Directive Highlight Check</p>
+
+<label for="example-ngModel">{{ availableRoom }}</label>
+<input [(ngModel)]="availableRoom" id="example-ngModel" />
+
+<div *ngFor="let room of roomList">
+  <h4>Rom type {{ room.type }}</h4>
+  <h4>Rom type {{ room.name }}</h4>
+  <h4>Rom type {{ room.capacity }}</h4>
 </div>
-
-<button (click)="onClick()">Click Me.!</button>

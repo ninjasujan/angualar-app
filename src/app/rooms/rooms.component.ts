@@ -1,25 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from '../directives/highlight.directive';
 
 @Component({
   selector: 'app-rooms',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, HighlightDirective],
+  // viewProviders: [],
   templateUrl: './rooms.component.html',
   styleUrl: './rooms.component.css',
 })
 export class RoomsComponent implements OnInit {
-  noOfRooms = 0;
+  classList = {};
 
-  roomMetaInfo = {
-    booked: 10,
-    available: 10,
-  };
+  noOfRooms = 10;
 
-  constructor() {}
+  roomList = [
+    { name: 'Room 1', capacity: 2, type: 'Single' },
+    { name: 'Room 2', capacity: 3, type: 'Double' },
+    { name: 'Room 3', capacity: 4, type: 'Suite' },
+  ];
 
-  onClick = () => {
-    console.log('Button Clicked');
+  capacity = 20;
+
+  availableRoom = 10;
+
+  onRoomStatusCheck = () => {
+    if (this.availableRoom > 0) {
+      this.availableRoom = 0;
+      this.classList = {
+        room_na: true,
+      };
+    } else {
+      this.availableRoom = 10;
+      this.classList = {
+        room_avail: true,
+      };
+    }
   };
 
   ngOnInit(): void {}
