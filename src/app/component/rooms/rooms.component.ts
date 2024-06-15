@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HighlightDirective } from '../directives/highlight.directive';
+import { HighlightDirective } from '../../directives/highlight.directive';
 import { HotelComponent } from '../hotel/hotel.component';
 
 @Component({

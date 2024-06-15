@@ -5,7 +5,7 @@ import {
   Output,
   numberAttribute,
 } from '@angular/core';
-import { CardComponent } from '../component/card/card.component';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-hotel',

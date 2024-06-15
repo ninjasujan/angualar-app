@@ -1,0 +1,7 @@
+<h4>Room Component works</h4>
+
+<h4 [ngClass]="classList">Room Available {{ availableRoom }}</h4>
+
+<button (click)="onRoomStatusCheck()">Check Availability</button>
+
+<app-hotel [count]="5" (submitHandler)="onRoomStatusCheck()"></app-hotel>
