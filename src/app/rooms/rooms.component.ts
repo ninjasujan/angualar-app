@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from '../directives/highlight.directive';
+import { HotelComponent } from '../hotel/hotel.component';
 
 @Component({
   selector: 'app-rooms',
   standalone: true,
-  imports: [CommonModule, FormsModule, HighlightDirective],
+  imports: [CommonModule, FormsModule, HighlightDirective, HotelComponent],
   // viewProviders: [],
   templateUrl: './rooms.component.html',
   styleUrl: './rooms.component.css',
