@@ -17,6 +17,12 @@ export class SizerComponent {
   @Input() size!: number;
   @Output() sizeChange = new EventEmitter<number>();
 
+  groups = [
+    { name: 'A', color: 'RED' },
+    { name: 'B', color: 'GREEN' },
+    { name: 'C', color: 'WHITE' },
+  ];
+
   resize(counter: number) {
     this.size += counter;
     this.sizeChange.emit(this.size);

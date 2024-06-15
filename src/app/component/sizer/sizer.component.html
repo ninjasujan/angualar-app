@@ -1,4 +1,21 @@
 <div>
+  @if (size > 1) {
+  <p>Size is greater than 1</p>
+  > } @else {
+  <p>Size is greater than zero</p>
+  }
+
+  <h5>Team List</h5>
+
+  @for(team of groups; track team.color; let index = $index) {
+
+  <div>
+    <p>Team Name: {{ team.name }}</p>
+    <p>Team Color: {{ team.color }}</p>
+    <p>Team Number: {{ index }}</p>
+  </div>
+  }
+
   <button (click)="resize(-1)">-</button>
   <button (click)="resize(1)">+</button>
 </div>
