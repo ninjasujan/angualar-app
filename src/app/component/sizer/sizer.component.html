@@ -10,7 +10,7 @@
   @for(team of groups; track team.color; let index = $index) {
 
   <div>
-    <p>Team Name: {{ team.name }}</p>
+    <p>Team Name: {{ team.name | uppercase }}</p>
     <p>Team Color: {{ team.color }}</p>
     <p>Team Number: {{ index }}</p>
   </div>

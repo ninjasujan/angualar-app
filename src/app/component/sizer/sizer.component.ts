@@ -1,3 +1,4 @@
+import { DatePipe, UpperCasePipe } from '@angular/common';
 import {
   Component,
   EventEmitter,
@@ -9,7 +10,7 @@ import {
 @Component({
   selector: 'app-sizer',
   standalone: true,
-  imports: [],
+  imports: [UpperCasePipe],
   templateUrl: './sizer.component.html',
   styleUrl: './sizer.component.css',
 })
